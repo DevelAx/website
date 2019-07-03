@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    title : 'My Cool Product!',
+    subtitle : 'Some additional info about My Cool Product'
   }
 });
