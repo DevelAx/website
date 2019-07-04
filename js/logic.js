@@ -3,5 +3,10 @@ var app = new Vue({
   data: {
     title : 'My Cool Product!',
     subtitle : 'Some additional info about My Cool Product'
+  },
+  watch: {
+    '$route' (to, from) {
+      alert("XXX");
+    }
   }
 });
