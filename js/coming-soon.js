@@ -15,10 +15,10 @@
 
     // setup hash-languagge
     window.location.hash = lang;
-    updateContent();
+    updateContent(lang);
   }
   
-  function updateContent(){
+  function updateContent(lang){
     $.getJSON(`/data/${lang}.json`, function(a) {
     var html = `<div class="masthead-content text-white py-5 py-md-0">
               <h1 class="mb-3">${a.title}</h1>
