@@ -1,16 +1,6 @@
 (function($) {
   "use strict"; // Start of use strict
-  // detect browser language
-  var hash = window.location.hash && window.location.hash.substring(1);
-  var lang = (hash || navigator.language || navigator.browserLanguage).split('-')[0];
-  var langs = ["en", "ru"];
-
-  if (!langs.includes(lang)) {
-    lang = "en"; // default;
-  }
-
-  // setup hash-languagge
-  window.location.hash = lang;
+  $(window).bind('hashchange', detectLanguage);
 
   $.getJSON(`/data/${lang}.json`, function(a) {
     var html = `<div class="masthead-content text-white py-5 py-md-0">
@@ -26,6 +16,18 @@
     $('#content').html(html);
   });
   
+  function detectLanguage(){
+    // detect browser language or url-hash
+    var hash = window.location.hash && window.location.hash.substring(1);
+    var lang = (hash || navigator.language || navigator.browserLanguage).split('-')[0];
+    var langs = ["en", "ru"];
 
+    if (!langs.includes(lang)) {
+      lang = "en"; // default;
+    }
+
+    // setup hash-languagge
+    window.location.hash = lang;
+  }
 
 })(jQuery); // End of use strict
