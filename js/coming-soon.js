@@ -1,6 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
   $(window).bind('hashchange', detectLanguage);
+  detectLanguage();
 
   function detectLanguage(){
     // detect browser language or url-hash
