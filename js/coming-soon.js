@@ -1,9 +1,11 @@
-var lang = (navigator.language || navigator.browserLanguage).split('-')[0];
+var lang = (window.location.hash || navigator.language || navigator.browserLanguage).split('-')[0];
 var langs = ["en", "ru"];
 
 if (!langs.includes(lang)) {
   lang = "en"; // default;
 }
+
+window.location.hash = lang;
 
 (function($) {
   "use strict"; // Start of use strict
