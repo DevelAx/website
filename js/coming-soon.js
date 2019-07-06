@@ -14,6 +14,7 @@
 
     // setup hash-languagge
     window.location.hash = lang;
+    updateContent();
   }
   
   function updateContent(){
