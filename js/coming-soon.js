@@ -17,7 +17,7 @@
     window.location.hash = lang;
     updateContent(lang);
   }
-  
+
   function updateContent(lang){
     $.getJSON(`/data/${lang}.json`, function(a) {
     var html = `<div class="masthead-content text-white py-5 py-md-0">
@@ -33,5 +33,11 @@
       $('#content').html(html);
     });
   }
+
+  $('.dropdown-menu a').click(function () {
+    $('#selected').html($(this).html());
+  });
+
+  $(".dropdown .dropdown-menu a")[0].click();
 
 })(jQuery); // End of use strict

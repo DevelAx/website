@@ -212,3 +212,25 @@ video {
 .input {
   font-weight: 300 !important;
 }
+
+#language-selector {
+
+    margin-top: 1rem;
+    width: 100%;
+    z-index: 2;
+}
+
+#language-selector button {
+  background-color: lightcyan;
+  color: black;
+}
+
+/* @media (min-width: 768px)  {
+  #language-selector{
+    margin: 0;
+    position: absolute;
+    right: 2.5rem;
+    top: 2rem;
+    width: auto;
+  }
+} */

@@ -17,9 +17,10 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/coming-soon.min.css" rel="stylesheet">
+  <link href="css/coming-soon.css" rel="stylesheet">
 
 </head>
 
@@ -33,6 +34,24 @@
   <div class="masthead">
     <div class="masthead-bg"></div>
     <div class="container h-100">
+      <div class="row h-10">
+        <div id="content" class="col-12 my-auto">
+<div id="language-selector">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span id="selected">Chose option</span><span class="caret"></span></a>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#en"><span class="flag-icon flag-icon-us"></span><span>&nbsp;&nbsp;English</span></a>
+      <a class="dropdown-item" href="#ru"><span class="flag-icon flag-icon-ru"></span><span>&nbsp;&nbsp;Русский</span></a>
+      <a class="dropdown-item" href="#fr"><span class="flag-icon flag-icon-fr"></span><span>&nbsp;&nbsp;Français</span></a>
+      <a class="dropdown-item" href="#it"><span class="flag-icon flag-icon-it"></span><span>&nbsp;&nbsp;Italiano</span></a>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
       <div class="row h-100">
         <div id="content" class="col-12 my-auto">
           <div class="masthead-content text-white py-5 py-md-0">
@@ -42,6 +61,8 @@
       </div>
     </div>
   </div>
+
+
 
   <div class="social-icons">
     <ul class="list-unstyled text-center mb-0">
